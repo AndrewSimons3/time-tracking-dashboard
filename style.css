@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+/* - Blue: hsl(246, 80%, 60%)
+
+- Light red (work): hsl(15, 100%, 70%)
+- Soft blue (play): hsl(195, 74%, 62%)
+- Light red (study): hsl(348, 100%, 68%)
+- Lime green (exercise): hsl(145, 58%, 55%)
+- Violet (social): hsl(264, 64%, 52%)
+- Soft orange (self care): hsl(43, 84%, 65%)
+
+
+- Very dark blue: hsl(226, 43%, 10%)
+- Dark blue: hsl(235, 46%, 20%)
+- Desaturated blue: hsl(235, 45%, 61%)
+- Pale Blue: hsl(236, 100%, 87%) */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	background-color: hsl(226, 43%, 10%);
+	font-family: 'Rubik', sans-serif;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.main-container {
+	display: grid;
+	grid: repeat(2, 1fr) / repeat(4, 1fr);
+	gap: 65px 25px;
+	height: 500px;
+}
+
+.profile-container {
+	grid-column: 1/2;
+	grid-row: 1/3;
+}
+
+.profile-content {
+	background-color: hsl(246, 80%, 60%);
+	border-radius: 12px;
+	height: 325px;
+	padding: 1rem;
+}
+
+.profile-picture {
+	width: 75px;
+	height: 75px;
+	border: 3px solid #fff;
+	border-radius: 50px;
+}
+
+.container {
+	height: 100%;
+  position: relative;
+}
+
+.content-container {
+	background-color: hsl(235, 46%, 20%);
+	border-radius: 12px;
+	width: 100%;
+	height: 100%;
+  position: absolute;
+  z-index: 10;
+  top: 40px;
+}
+
+.bg {
+	width: 100%;
+  border-radius: 12px 12px 0 0;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  z-index: -1;
+      padding: 0 20px;
+
+}
+
+.work {
+	background-color: hsl(15, 100%, 70%);
+}
+
+.play {
+	background-color: hsl(195, 74%, 62%);
+}
+
+.study {
+	background-color: hsl(348, 100%, 68%);
+}
+
+.exercise {
+	background-color: hsl(145, 58%, 55%);
+}
+
+.social {
+	background-color: hsl(264, 64%, 52%);
+}
+
+.self-care {
+	background-color: hsl(43, 84%, 65%);
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
