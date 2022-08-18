@@ -75,17 +75,16 @@ body {
   padding: 2.5rem;
 }
 .menu-card .menu .menu-link {
-  color: hsl(235deg, 45%, 61%);
   font-size: 1.8rem;
   cursor: pointer;
   list-style: none;
   text-decoration: none;
   color: hsl(236deg, 100%, 87%);
 }
-.menu-card .menu .menu-link .menu-active {
+.menu-card .menu .menu-link:hover {
   color: white;
 }
-.menu-card .menu .menu-link:hover {
+.menu-card .menu .menu-active {
   color: white;
 }
 
@@ -154,32 +153,32 @@ body {
 
 .work {
   background-color: hsl(15deg, 100%, 70%);
-  background-image: url("./images/icon-work.svg");
+  background-image: url("../images/icon-work.svg");
 }
 
 .play {
   background-color: hsl(195deg, 74%, 62%);
-  background-image: url("./images/icon-play.svg");
+  background-image: url("../images/icon-play.svg");
 }
 
 .study {
   background-color: hsl(348deg, 100%, 68%);
-  background-image: url("./images/icon-study.svg");
+  background-image: url("../images/icon-study.svg");
 }
 
 .exercise {
   background-color: hsl(145deg, 58%, 55%);
-  background-image: url("./images/icon-exercise.svg");
+  background-image: url("../images/icon-exercise.svg");
 }
 
 .social {
   background-color: hsl(264deg, 64%, 52%);
-  background-image: url("./images/icon-social.svg");
+  background-image: url("../images/icon-social.svg");
 }
 
 .selfcare {
   background-color: hsl(43deg, 84%, 65%);
-  background-image: url("./images/icon-selfcare.svg");
+  background-image: url("../images/icon-selfcare.svg");
 }
 
 .attribution {

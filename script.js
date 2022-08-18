@@ -1,22 +1,19 @@
 'use strict';
-let timeframe = 'weekly'; //default value
+let timeframe = 'weekly';
 const container = document.querySelector('.container');
-let regularCards; //place holder for all cards (work, play, study, etc)
+let regularCards;
 
-// 1. Initialize Menu
+// initialize menu
 const menu = document.querySelectorAll('.menu-link');
 
-menu.forEach((element) => {
-	element.addEventListener('click', menuOnClick);
-});
+menu.forEach((el) => el.addEventListener('click', menuOnClick));
 
-// 2. Get JSON Data & Create Cards
-let data = {};
+const data = {};
 
 fetch('./data.json')
-	.then((resp) => resp.json())
+	.then((response) => response.json())
 	.then((jsonData) => {
-		//Create Cards
+		//create cards
 		jsonData.forEach((element) => {
 			container.insertAdjacentHTML(
 				'beforeend',
@@ -24,23 +21,18 @@ fetch('./data.json')
 			);
 		});
 
-		//Convert array to dict
 		jsonData.forEach((element) => {
 			data[element.title] = element.timeframes;
 		});
 
-	
 		regularCards = document.querySelectorAll('.regular-card');
-		//console.log(regularCards);
 	});
 
-// -------- Functions
+console.log(data);
 
 function menuOnClick(event) {
-	//console.log('click', event.target.innerText.toLowerCase());
-	menu.forEach((element) => {
-		element.classList.remove('menu-active');
-	});
+	console.log('clicked');
+	menu.forEach((el) => el.classList.remove('menu-active'));
 	event.target.classList.add('menu-active');
 	timeframe = event.target.innerText.toLowerCase();
 
@@ -48,9 +40,7 @@ function menuOnClick(event) {
 }
 
 function updateCards(timeframe) {
-	regularCards.forEach((card) => {
-		updateCard(card, timeframe);
-	});
+	regularCards.forEach((card) => updateCard(card, timeframe));
 }
 
 function updateCard(card, timeframe) {
@@ -71,9 +61,9 @@ function updateCard(card, timeframe) {
 }
 
 function createRegularCard(element, timeframe) {
-	let title = element['title'];
-	let current = element['timeframes'][timeframe]['current'];
-	let previous = element['timeframes'][timeframe]['previous'];
+	const title = element['title'];
+	const current = element['timeframes'][timeframe]['current'];
+	const previous = element['timeframes'][timeframe]['previous'];
 
 	const timeframeMsg = {
 		daily: 'Yesterday',
@@ -82,7 +72,7 @@ function createRegularCard(element, timeframe) {
 	};
 
 	return `
-<div class="regular-card ${title.toLowerCase().replace(/\s/g, '')}">
+  <div class="regular-card ${title.toLowerCase().replace(/\s/g, '')}">
     <div class="property-card">
         <div class="row">
             <div class="title">${title}</div>
