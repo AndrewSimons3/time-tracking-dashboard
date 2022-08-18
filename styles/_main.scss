@@ -1,5 +1,10 @@
 body {
 	background-color: $very-dark-blue;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
 }
 
 .container {
@@ -186,4 +191,8 @@ body {
 .selfcare {
 	background-color: $selfcare;
 	background-image: url('./images/icon-selfcare.svg');
+}
+
+.attribution {
+	color: #fff;
 }
