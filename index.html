@@ -4,118 +4,151 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- displays site properly based on user's device -->
-
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+			rel="stylesheet"
+		/>
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="32x32"
 			href="./images/favicon-32x32.png"
 		/>
-		<link rel="stylesheet" href="./style.css" />
+		<script type="module" defer src="./script.js"></script>
+		<link rel="stylesheet" href="./styles/output.css" />
 		<title>Frontend Mentor | Time tracking dashboard</title>
 
 		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 	</head>
 	<body>
-		<main class="main-container">
-			<div class="profile-container">
-				<div class="profile-content">
-					<img class="profile-picture" src="./images/image-jeremy.png" alt="" />
-					<p>Report for</p>
-					<h1>Jeremy Robson</h1>
-				</div>
-				<div class="options">
-					<button class="option" data-option="daily">Daily</button>
-					<button class="option" data-option="daily">Weekly</button>
-					<button class="option" data-option="daily">Monthly</button>
-				</div>
-			</div>
-			<div class="container">
-				<div class="bg work">
-					<img src="./images/icon-work.svg" alt="work" />
-				</div>
-				<div class="content-container">
-					<div class="title">
-						<h2>Work</h2>
-						<img src="./images/icon-ellipsis.svg" alt="" />
+		<main class="container">
+			<div class="menu-card">
+				<div class="card-report">
+					<img src="./images/image-jeremy.png" alt="image jeremy" />
+					<div class="report">
+						<p>Report for</p>
+						<div class="name">Jeremy Robson</div>
 					</div>
-					<h1>32hrs</h1>
-					<p>Last Week - 36hrs</p>
+				</div>
+
+				<div class="menu">
+					<a class="menu-link" href="#">Daily</a>
+					<a class="menu-link" href="#">Weekly</a>
+					<a class="menu-link" href="#">Monthly</a>
 				</div>
 			</div>
 
-			<div class="container">
-				<div class="bg play">
-					<img src="./images/icon-play.svg" alt="play" />
-				</div>
+			<!-- regular card -->
 
-				<div class="content-container">
-					<div class="title">
-						<h2>Play</h2>
-						<img src="./images/icon-ellipsis.svg" alt="elipses" />
+			<!-- <div class="regular-card work">
+				<div class="property-card">
+					<div class="row">
+						<div class="title">Work</div>
+						<div class="points">
+							<div class="point"></div>
+							<div class="point"></div>
+							<div class="point"></div>
+						</div>
 					</div>
-					<h1>32hrs</h1>
-					<p>Last Week - 36hrs</p>
-				</div>
-			</div>
 
-			<div class="container">
-				<div class="bg study">
-					<img src="./images/icon-study.svg" alt="study" />
-				</div>
-
-				<div class="content-container">
-					<div class="title">
-						<h2>Study</h2>
-						<img src="./images/icon-ellipsis.svg" alt="" />
+					<div class="row-2">
+						<div class="hours">32hrs</div>
+						<div class="description">Last Week - 36hrs</div>
 					</div>
-					<h1>32hrs</h1>
-					<p>Last Week - 36hrs</p>
 				</div>
 			</div>
 
-			<div class="container">
-				<div class="bg exercise">
-					<img src="./images/icon-exercise.svg" alt="exercise" />
-				</div>
-
-				<div class="content-container">
-					<div class="title">
-						<h2>Exercise</h2>
-						<img src="./images/icon-ellipsis.svg" alt="" />
+			<div class="regular-card play">
+				<div class="property-card">
+					<div class="row">
+						<div class="title">Play</div>
+						<div class="points">
+							<div class="point"></div>
+							<div class="point"></div>
+							<div class="point"></div>
+						</div>
 					</div>
-					<h1>32hrs</h1>
-					<p>Last Week - 36hrs</p>
-				</div>
-			</div>
 
-			<div class="container">
-				<div class="bg social">
-					<img src="./images/icon-social.svg" alt="social" />
-				</div>
-
-				<div class="content-container">
-					<div class="title">
-						<h2>Social</h2>
-						<img src="./images/icon-ellipsis.svg" alt="" />
+					<div class="row-2">
+						<div class="hours">10hrs</div>
+						<div class="description">Last Week - 8hrs</div>
 					</div>
-					<h1>32hrs</h1>
-					<p>Last Week - 36hrs</p>
 				</div>
 			</div>
 
-			<div class="container">
-				<div class="bg self-care"><img src="./images/icon-self-care.svg" alt="self care" /></div>
-				
-				<div class="content-container">
-					<div class="title">
-						<h2>Self Care</h2>
-						<img src="./images/icon-ellipsis.svg" alt="" />
+			<div class="regular-card study">
+				<div class="property-card">
+					<div class="row">
+						<div class="title">Play</div>
+						<div class="points">
+							<div class="point"></div>
+							<div class="point"></div>
+							<div class="point"></div>
+						</div>
 					</div>
-					<h1>32hrs</h1>
-					<p>Last Week - 36hrs</p>
+
+					<div class="row-2">
+						<div class="hours">10hrs</div>
+						<div class="description">Last Week - 8hrs</div>
+					</div>
 				</div>
 			</div>
+
+			<div class="regular-card exercise">
+				<div class="property-card">
+					<div class="row">
+						<div class="title">Play</div>
+						<div class="points">
+							<div class="point"></div>
+							<div class="point"></div>
+							<div class="point"></div>
+						</div>
+					</div>
+
+					<div class="row-2">
+						<div class="hours">10hrs</div>
+						<div class="description">Last Week - 8hrs</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="regular-card social">
+				<div class="property-card">
+					<div class="row">
+						<div class="title">Play</div>
+						<div class="points">
+							<div class="point"></div>
+							<div class="point"></div>
+							<div class="point"></div>
+						</div>
+					</div>
+
+					<div class="row-2">
+						<div class="hours">10hrs</div>
+						<div class="description">Last Week - 8hrs</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="regular-card selfcare">
+				<div class="property-card">
+					<div class="row">
+						<div class="title">Play</div>
+						<div class="points">
+							<div class="point"></div>
+							<div class="point"></div>
+							<div class="point"></div>
+						</div>
+					</div>
+
+					<div class="row-2">
+						<div class="hours">10hrs</div>
+						<div class="description">Last Week - 8hrs</div>
+					</div>
+				</div>
+			</div> -->
 		</main>
 
 		<!-- <div class="attribution">
